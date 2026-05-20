@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Know Your Rhythm — Oura Ring FemTech Campaign | Digital Marketing Portfolio</title>
+<meta name="description" content="An integrated digital & social media marketing campaign for the Oura Ring targeting women 24–35. Strategy, channel planning, influencer activation, and creative by Umair Khan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --midnight:#2B3A52;
+    --midnight-deep:#1E2B40;
+    --cream:#F5F1E8;
+    --cream-deep:#EDE6D8;
+    --rose:#E6B8A2;
+    --rose-deep:#D49E84;
+    --sage:#A8B8A1;
+    --lavender:#C8B8D0;
+    --ink:#283142;
+    --muted:#6A7080;
+    --maxw:1140px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;color:var(--midnight);}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'Inter';font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:600;color:var(--rose-deep);margin-bottom:18px;
+  }
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,241,232,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(43,58,82,.08);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .logo{font-family:'Fraunces';font-size:1.15rem;letter-spacing:.04em;color:var(--midnight);}
+  .logo span{color:var(--rose-deep);}
+  .navlinks{display:flex;gap:30px;font-size:.86rem;font-weight:500;}
+  .navlinks a{color:var(--muted);transition:color .2s;}
+  .navlinks a:hover{color:var(--midnight);}
+  @media(max-width:760px){.navlinks{display:none;}}
+
+  /* HERO */
+  header.hero{
+    background:linear-gradient(160deg,var(--midnight) 0%,var(--midnight-deep) 100%);
+    color:var(--cream);position:relative;overflow:hidden;
+    padding:clamp(70px,11vw,130px) 0 clamp(80px,12vw,140px);
+  }
+  header.hero::after{
+    content:"";position:absolute;right:-12%;top:-20%;width:560px;height:560px;border-radius:50%;
+    background:radial-gradient(circle,rgba(230,184,162,.32),transparent 65%);
+  }
+  header.hero::before{
+    content:"";position:absolute;left:-10%;bottom:-25%;width:480px;height:480px;border-radius:50%;
+    background:radial-gradient(circle,rgba(200,184,208,.22),transparent 62%);
+  }
+  .hero .wrap{position:relative;z-index:2;max-width:880px;}
+  .hero .eyebrow{color:var(--rose);}
+  .hero h1{color:var(--cream);font-size:clamp(2.6rem,6.4vw,4.7rem);font-weight:500;letter-spacing:-.01em;}
+  .hero h1 em{font-style:italic;color:var(--rose);}
+  .hero .tagline{font-family:'Fraunces';font-style:italic;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--cream-deep);opacity:.92;margin-top:22px;}
+  .hero p.lede{font-size:1.08rem;color:rgba(245,241,232,.78);margin-top:24px;max-width:640px;}
+  .hero .cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:14px 28px;border-radius:40px;font-weight:600;font-size:.9rem;
+    transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;
+  }
+  .btn-primary{background:var(--rose);color:var(--midnight-deep);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(230,184,162,.35);}
+  .btn-ghost{border:1px solid rgba(245,241,232,.35);color:var(--cream);}
+  .btn-ghost:hover{background:rgba(245,241,232,.1);}
+  .hero-meta{display:flex;gap:36px;margin-top:54px;flex-wrap:wrap;}
+  .hero-meta div{font-size:.82rem;color:rgba(245,241,232,.6);}
+  .hero-meta div strong{display:block;font-family:'Fraunces';font-size:1.45rem;color:var(--cream);font-weight:500;margin-bottom:2px;}
+
+  /* SECTIONS */
+  section{padding:clamp(64px,9vw,108px) 0;}
+  .section-head{max-width:720px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.9rem,4vw,2.9rem);}
+  .section-head p{color:var(--muted);font-size:1.05rem;margin-top:18px;}
+  .alt{background:var(--cream-deep);}
+  .dark{background:var(--midnight);color:var(--cream-deep);}
+  .dark h2,.dark h3{color:var(--cream);}
+  .dark .section-head p{color:rgba(245,241,232,.7);}
+
+  /* PILLARS / CARD GRID */
+  .grid{display:grid;gap:24px;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  @media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:620px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
+  .card{
+    background:var(--cream);border:1px solid rgba(43,58,82,.09);border-radius:var(--radius);
+    padding:32px 28px;transition:transform .25s,box-shadow .25s;
+  }
+  .alt .card{background:#fff;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(43,58,82,.1);}
+  .card .num{font-family:'Fraunces';font-size:1rem;color:var(--rose-deep);font-weight:600;}
+  .card h3{font-size:1.22rem;margin:14px 0 10px;}
+  .card p{color:var(--muted);font-size:.95rem;}
+  .dark .card{background:rgba(245,241,232,.05);border-color:rgba(245,241,232,.12);}
+  .dark .card p{color:rgba(245,241,232,.72);}
+
+  /* STRATEGY split */
+  .split{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;}
+  @media(max-width:860px){.split{grid-template-columns:1fr;gap:38px;}}
+  .quote-block{
+    border-left:3px solid var(--rose);padding:6px 0 6px 26px;
+    font-family:'Fraunces';font-style:italic;font-size:1.5rem;color:var(--midnight);line-height:1.4;
+  }
+  .feature-list{list-style:none;margin-top:8px;}
+  .feature-list li{padding:16px 0;border-bottom:1px solid rgba(43,58,82,.1);display:flex;gap:16px;align-items:flex-start;}
+  .feature-list li:last-child{border-bottom:none;}
+  .feature-list .dot{width:9px;height:9px;border-radius:50%;background:var(--rose);margin-top:9px;flex-shrink:0;}
+  .feature-list strong{display:block;color:var(--midnight);}
+  .feature-list span{color:var(--muted);font-size:.93rem;}
+
+  /* TABLE */
+  .table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid rgba(43,58,82,.1);}
+  table{width:100%;border-collapse:collapse;background:#fff;min-width:560px;}
+  th,td{text-align:left;padding:16px 20px;font-size:.92rem;border-bottom:1px solid rgba(43,58,82,.08);}
+  th{background:var(--midnight);color:var(--cream);font-family:'Inter';font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;}
+  td .stars{color:var(--rose-deep);letter-spacing:2px;}
+  tr:last-child td{border-bottom:none;}
+  td strong{color:var(--midnight);}
+
+  /* JOURNEY */
+  .journey{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:20px;}
+  @media(max-width:900px){.journey{grid-template-columns:repeat(2,1fr);gap:14px;}}
+  @media(max-width:520px){.journey{grid-template-columns:1fr;}}
+  .stage{padding:24px 20px;position:relative;border-right:1px solid rgba(245,241,232,.14);}
+  .journey .stage:last-child{border-right:none;}
+  @media(max-width:900px){.stage{border:1px solid rgba(245,241,232,.14);border-radius:14px;}}
+  .stage .step{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);font-weight:600;}
+  .stage h4{color:var(--cream);font-size:1.05rem;margin:8px 0 10px;}
+  .stage p{font-size:.82rem;color:rgba(245,241,232,.62);}
+
+  /* MEDIA */
+  .media-frame{border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 60px rgba(43,58,82,.18);background:#000;}
+  .media-frame img,.media-frame video{display:block;width:100%;height:auto;}
+  .caption{font-size:.84rem;color:var(--muted);margin-top:16px;font-style:italic;}
+  .dark .caption{color:rgba(245,241,232,.55);}
+
+  /* INFLUENCER tiers */
+  .tier{background:rgba(245,241,232,.05);border:1px solid rgba(245,241,232,.12);border-radius:var(--radius);padding:28px 26px;}
+  .tier .pct{font-family:'Fraunces';font-size:1.6rem;color:var(--rose);font-weight:500;}
+  .tier h3{font-size:1.12rem;margin:6px 0 12px;color:var(--cream);}
+  .tier p{font-size:.9rem;color:rgba(245,241,232,.72);}
+  .tier .tag{display:inline-block;margin-top:14px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);font-weight:600;}
+
+  /* BUDGET bars */
+  .budget{margin-top:10px;}
+  .budget-row{margin-bottom:22px;}
+  .budget-row .top{display:flex;justify-content:space-between;font-size:.92rem;margin-bottom:8px;}
+  .budget-row .top strong{color:var(--midnight);font-weight:600;}
+  .budget-row .top span{color:var(--rose-deep);font-family:'Fraunces';font-weight:600;}
+  .bar{height:10px;border-radius:6px;background:rgba(43,58,82,.08);overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--rose),var(--rose-deep));}
+
+  /* TAGS / tools */
+  .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;}
+  .chip{background:rgba(245,241,232,.06);border:1px solid rgba(245,241,232,.16);color:var(--cream-deep);
+    padding:9px 18px;border-radius:30px;font-size:.84rem;font-weight:500;}
+
+  /* METRICS */
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  @media(max-width:900px){.metrics{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.metrics{grid-template-columns:1fr;}}
+  .metric{text-align:center;padding:30px 16px;background:#fff;border-radius:var(--radius);border:1px solid rgba(43,58,82,.08);}
+  .metric .k{font-family:'Fraunces';font-size:.92rem;color:var(--rose-deep);font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+  .metric .v{font-size:.9rem;color:var(--muted);margin-top:10px;}
+
+  /* FOOTER */
+  footer{background:var(--midnight-deep);color:rgba(245,241,232,.7);padding:64px 0 40px;}
+  footer h2{color:var(--cream);font-size:clamp(1.7rem,3.5vw,2.4rem);max-width:560px;}
+  footer .row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:30px;margin-top:30px;}
+  footer .links{display:flex;gap:24px;font-size:.9rem;font-weight:500;}
+  footer .links a{color:var(--cream-deep);border-bottom:1px solid var(--rose);padding-bottom:3px;}
+  footer .fine{margin-top:50px;padding-top:24px;border-top:1px solid rgba(245,241,232,.12);font-size:.8rem;color:rgba(245,241,232,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Know Your <span>Rhythm</span></div>
+    <div class="navlinks">
+      <a href="#strategy">Strategy</a>
+      <a href="#audience">Audience</a>
+      <a href="#channels">Channels</a>
+      <a href="#social">Social & Influencer</a>
+      <a href="#creative">Creative</a>
+      <a href="#impact">Impact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Integrated Digital &amp; Social Media Campaign · FemTech</div>
+    <h1>Helping women <em>sync with their biology</em>, not override it.</h1>
+    <p class="tagline">"Your body speaks. Are you listening?"</p>
+    <p class="lede">A full-funnel digital marketing campaign for the <strong>Oura Ring</strong>, repositioning a wearable from the performance "specs war" into the high-growth FemTech category — built around body literacy, cycle awareness, and authentic creator storytelling for women aged 24–35.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#creative">View the Creative</a>
+      <a class="btn btn-ghost" href="#strategy">Explore the Strategy</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>24–35</strong>Target demographic</div>
+      <div><strong>6</strong>Channel journey stages</div>
+      <div><strong>4</strong>Influencer activation tiers</div>
+      <div><strong>High-80s%</strong>Retention thesis</div>
+    </div>
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Opportunity</div>
+      <h2>A defensible niche in a crowded wearables market.</h2>
+      <p>Apple and Whoop dominate a "masculine specs war" of steps, calories, and raw output. The strategy: stop competing on performance and own <strong>body literacy</strong> — positioning Oura as the decoder for the female body, where it can win on retention, trust, and medical credibility.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal"><div class="num">01 · Differentiation</div><h3>Escape the specs war</h3><p>Carve a defensible FemTech niche insulated from Apple &amp; Whoop by leading with hormonal health, recovery, and self-understanding rather than output metrics.</p></div>
+      <div class="card reveal"><div class="num">02 · Retention</div><h3>From accessory to essential</h3><p>Becoming a daily tool for fertility and hormonal health drives Oura's high-80s retention vs. low-30s for competing wearables.</p></div>
+      <div class="card reveal"><div class="num">03 · Trust</div><h3>Medical-grade authority</h3><p>FDA-cleared partnerships (e.g., Natural Cycles) establish clinical credibility with a demographic skeptical of superficial wellness trends.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section id="strategy" class="alt">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <div class="eyebrow">Brand Concept</div>
+        <h2 style="font-size:clamp(1.9rem,4vw,2.9rem);">The "Synced Life" &amp; Body Literacy</h2>
+        <p style="color:var(--muted);margin:18px 0 26px;">The central idea shifts the narrative from <em>tracking performance</em> to <em>syncing with physiology</em>. Instead of promoting raw output, Oura becomes a decoder that helps women align their work, lifestyle, and recovery with their natural rhythms.</p>
+        <div class="quote-block">"Your body is unique, not average — data as a tool for self-knowledge, not judgment."</div>
+      </div>
+      <div class="reveal">
+        <ul class="feature-list">
+          <li><span class="dot"></span><div><strong>Permission to listen, not override</strong><span>Rest reframed as strength — an explicit rejection of hustle &amp; toxic productivity culture.</span></div></li>
+          <li><span class="dot"></span><div><strong>Body autonomy through understanding</strong><span>Fertility &amp; cycle awareness without medical gatekeeping.</span></div></li>
+          <li><span class="dot"></span><div><strong>An empowering, knowledgeable friend</strong><span>Voice that says "Your body knows" and "You decide" — never "You should" or "Optimize your."</span></div></li>
+          <li><span class="dot"></span><div><strong>Inclusive by design</strong><span>Diverse representation across body types, ethnicities, and life stages.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="audience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Audience Insight</div>
+      <h2>What actually drives the purchase.</h2>
+      <p>Ranked decision factors from segmentation research across career-focused professionals, new mothers, and wellness seekers — each mapped to the psychological driver behind the behavior.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>Factor</th><th>Behavioral Signal</th><th>Psychological Driver</th><th>Weight</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sleep Quality &amp; Recovery</strong></td><td>Researches "Oura sleep accuracy" for 2–3 weeks</td><td>Chronic exhaustion seeking solutions</td><td><span class="stars">★★★★★</span></td></tr>
+          <tr><td><strong>Holistic Health Data</strong></td><td>Searches shift to "best wearable for hormones &amp; recovery"</td><td>Rejection of calorie / step obsession</td><td><span class="stars">★★★★★</span></td></tr>
+          <tr><td><strong>Cycle &amp; Reproductive Tracking</strong></td><td>40% research period-prediction accuracy</td><td>Body autonomy without gatekeeping</td><td><span class="stars">★★★★</span></td></tr>
+          <tr><td><strong>Discreet, Feminine Design</strong></td><td>Pinterest boards: "Oura vs Apple Watch style"</td><td>Tech shouldn't compromise aesthetic</td><td><span class="stars">★★★★</span></td></tr>
+          <tr><td><strong>Community &amp; Social Proof</strong></td><td>Browses Instagram #OuraRing (500K+ posts)</td><td>Validation through peer adoption</td><td><span class="stars">★★★</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid grid-2" style="margin-top:26px;">
+      <div class="card reveal"><div class="num">Segment · Ages 24–28</div><h3>The TikTok-native discoverer</h3><p>Drawn in by cycle-syncing workouts and FOMO purchase triggers. Responds to fast, playful short-form and financing options.</p></div>
+      <div class="card reveal"><div class="num">Segment · Ages 29–35</div><h3>The investment-minded researcher</h3><p>Reads long-form reviews, leans into fertility focus and medical validation, and approaches the ring as a considered investment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section id="channels" class="dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Full-Funnel Channel Strategy</div>
+      <h2>One customer journey, six orchestrated stages.</h2>
+      <p>Every touchpoint mapped to channel, content focus, and timing — moving a prospect from a late-night TikTok scroll to advocacy and UGC.</p>
+    </div>
+    <div class="journey reveal">
+      <div class="stage"><div class="step">01 Awareness</div><h4>Discovery</h4><p>Instagram, TikTok, Pinterest &amp; podcast ads. Lifestyle content &amp; unboxings, evenings 8–10pm.</p></div>
+      <div class="stage"><div class="step">02 Research</div><h4>Education</h4><p>Google, Reddit, YouTube, Well+Good. Scientific explainers &amp; long-form reviews.</p></div>
+      <div class="stage"><div class="step">03 Comparison</div><h4>Evaluation</h4><p>Review sites, r/ouraring, brand site. "Oura vs Whoop" guides on weekends.</p></div>
+      <div class="stage"><div class="step">04 Purchase</div><h4>Conversion</h4><p>Website, email retargeting, SMS. Cart recovery &amp; financing on pay-period mornings.</p></div>
+      <div class="stage"><div class="step">05 Retention</div><h4>Engagement</h4><p>Oura app, email nurture, community. Weekly insights &amp; challenges.</p></div>
+      <div class="stage"><div class="step">06 Advocacy</div><h4>Amplification</h4><p>Instagram UGC, referral program, TikTok. Organic transformation stories.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL & INFLUENCER -->
+<section id="social" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Social Media &amp; Influencer Engine</div>
+      <h2>Data showed influencer-led social was the highest-leverage channel.</h2>
+      <p>A four-tier creator program built on authenticity markers — the "unglamorous data," the honest rest day — rather than polished perfection. Backed by a copyright-safe, inclusive messaging framework.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="tier reveal"><div class="pct">4–8%</div><h3>Wellness Influencers</h3><p>50K–500K followers. A 90-day wellness journey with Oura integration.</p><span class="tag">Shares unglamorous data</span></div>
+      <div class="tier reveal"><div class="pct">6–12%</div><h3>FemTech Advocates</h3><p>40K–200K followers. Cycle-tracking comparison deep-dives.</p><span class="tag">Medical credibility</span></div>
+      <div class="tier reveal"><div class="pct">5–10%</div><h3>Fitness Creators</h3><p>30K–300K followers. A 30-day cycle-synced training program.</p><span class="tag">Shows rest days</span></div>
+      <div class="tier reveal"><div class="pct">5–9%</div><h3>Working Mothers</h3><p>60K–400K followers. Postpartum recovery journeys.</p><span class="tag">Honest vulnerability</span></div>
+    </div>
+
+    <div class="split" style="margin-top:64px;">
+      <div class="reveal">
+        <h3 style="font-size:1.5rem;">Sample social copy that converts</h3>
+        <p style="color:var(--muted);margin:14px 0 24px;">Built in the brand's voice — supportive, never preachy — for each stage of the funnel.</p>
+        <div style="background:#fff;border-radius:14px;padding:24px;border:1px solid rgba(43,58,82,.1);margin-bottom:16px;">
+          <div class="eyebrow" style="margin-bottom:10px;">Instagram Carousel</div>
+          <p style="color:var(--ink);font-size:.96rem;">"Three things my Oura Ring taught me about my cycle that changed everything 🌙 (Spoiler: I wasn't lazy during week 3 — my body was literally preparing for my period.) Which insight resonates with you? 👇"</p>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:24px;border:1px solid rgba(43,58,82,.1);">
+          <div class="eyebrow" style="margin-bottom:10px;">TikTok · 30s "Go Easy to Go Far"</div>
+          <p style="color:var(--ink);font-size:.96rem;">"POV: You think you gotta go hard or go home… but your Oura Ring is like… 'Girl, sit down.' Old me: pushed through anyway. New me: honors what my body needs. Next-day readiness 84 — and somehow the world didn't end ✨"</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.5rem;">Strategic partnerships</h3>
+        <p style="color:var(--muted);margin:14px 0 22px;">Co-marketing that meets the audience where trust already lives.</p>
+        <ul class="feature-list">
+          <li><span class="dot"></span><div><strong>Wellness brands</strong><span>Calm, Headspace, Athletic Greens — co-branded sleep kits &amp; bundled subscriptions.</span></div></li>
+          <li><span class="dot"></span><div><strong>Fitness studios</strong><span>Barry's, CorePower, SoulCycle — in-studio demos &amp; instructor partnerships.</span></div></li>
+          <li><span class="dot"></span><div><strong>Healthcare providers</strong><span>OBGYN &amp; fertility clinics — patient education &amp; referral programs.</span></div></li>
+          <li><span class="dot"></span><div><strong>Media partners</strong><span>Well+Good, goop, Healthline — co-created editorial &amp; expert roundtables.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIVE -->
+<section id="creative" class="dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Creative Execution</div>
+      <h2>From mood board to motion.</h2>
+      <p>A cohesive visual world — soft natural light, warm neutrals, candid moments — translated into a creator-style influencer video built for short-form social.</p>
+    </div>
+
+    <div class="split" style="align-items:start;">
+      <div class="reveal">
+        <div class="media-frame">
+          <img src="assets/moodboard.jpg" alt="Oura Ring 'Know Your Rhythm' campaign mood board — warm, candid lifestyle photography of women, the Oura app sleep dashboard, and the ring." loading="lazy" />
+        </div>
+        <p class="caption">Mood board — generated &amp; art-directed to define the campaign's tone, lighting, and product integration.</p>
+      </div>
+      <div class="reveal">
+        <div class="media-frame">
+          <video controls preload="metadata" poster="assets/moodboard.jpg" playsinline>
+            <source src="assets/influencer-video.mp4" type="video/mp4" />
+            Your browser doesn't support embedded video.
+          </video>
+        </div>
+        <p class="caption">Influencer-style social video — concepted, scripted, and produced for the 24–35 demographic.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:56px;">
+      <div class="card reveal"><div class="num">Palette</div><h3>Warm &amp; intentional</h3><p>Midnight blue #2B3A52, warm cream #F5F1E8, rose gold #E6B8A2, with sage &amp; lavender accents.</p></div>
+      <div class="card reveal"><div class="num">Photography</div><h3>Lived-in, not staged</h3><p>Golden-hour light, intimate candid composition, real homes &amp; studios. Ring visible but never the hero.</p></div>
+      <div class="card reveal"><div class="num">Typography</div><h3>Modern &amp; credible</h3><p>Warm serif headlines, clean readable body, precise data type — approachable yet tech-credible.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT / METRICS + BUDGET -->
+<section id="impact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Measurement &amp; Investment</div>
+      <h2>Built to be measured, funded to perform.</h2>
+      <p>A KPI framework spanning the full funnel, paired with a budget weighted toward the channels the data showed mattered most.</p>
+    </div>
+
+    <div class="metrics reveal" style="margin-bottom:64px;">
+      <div class="metric"><div class="k">Awareness</div><div class="v">Social impressions · influencer reach · earned media</div></div>
+      <div class="metric"><div class="k">Engagement</div><div class="v">Engagement &amp; video-completion rates · site traffic</div></div>
+      <div class="metric"><div class="k">Conversion</div><div class="v">Trial-to-purchase · financing adoption · cart completion</div></div>
+      <div class="metric"><div class="k">Retention</div><div class="v">App engagement · logging frequency · renewals</div></div>
+      <div class="metric"><div class="k">Advocacy</div><div class="v">Referral participation · UGC volume · NPS</div></div>
+    </div>
+
+    <div class="split">
+      <div class="reveal">
+        <h3 style="font-size:1.5rem;">Budget allocation</h3>
+        <p style="color:var(--muted);margin:14px 0 28px;">Weighted toward paid social &amp; influencer — the highest-leverage channel for this demographic.</p>
+        <div class="budget">
+          <div class="budget-row"><div class="top"><strong>Paid Social &amp; Influencer</strong><span>40%</span></div><div class="bar"><i style="width:40%"></i></div></div>
+          <div class="budget-row"><div class="top"><strong>Content Production</strong><span>25%</span></div><div class="bar"><i style="width:25%"></i></div></div>
+          <div class="budget-row"><div class="top"><strong>PR &amp; Partnerships</strong><span>20%</span></div><div class="bar"><i style="width:20%"></i></div></div>
+          <div class="budget-row"><div class="top"><strong>Community &amp; Retention</strong><span>15%</span></div><div class="bar"><i style="width:15%"></i></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.5rem;">Tooling &amp; AI-assisted workflow</h3>
+        <p style="color:var(--muted);margin:14px 0 22px;">The campaign was researched, written, designed, and produced using a modern, multi-tool AI stack — managing prompt engineering and reproducibility across platforms to ship polished creative quickly.</p>
+        <div class="chips">
+          <span class="chip" style="color:var(--midnight);background:#fff;border-color:rgba(43,58,82,.14);">Claude Sonnet 4.5 — strategy &amp; copy</span>
+          <span class="chip" style="color:var(--midnight);background:#fff;border-color:rgba(43,58,82,.14);">ChatGPT — short-form scripts</span>
+          <span class="chip" style="color:var(--midnight);background:#fff;border-color:rgba(43,58,82,.14);">Gemini Deep Research — audience insight</span>
+          <span class="chip" style="color:var(--midnight);background:#fff;border-color:rgba(43,58,82,.14);">Nano Banana — mood board imagery</span>
+          <span class="chip" style="color:var(--midnight);background:#fff;border-color:rgba(43,58,82,.14);">Sora — video generation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--rose);">Digital Marketing Portfolio</div>
+    <h2>Strategy, social, and creative — built end to end.</h2>
+    <div class="row">
+      <p style="max-width:480px;color:rgba(245,241,232,.7);">This "Know Your Rhythm" campaign was developed by <strong style="color:var(--cream);">Umair Khan</strong> as a Cornell MBA digital marketing project — spanning audience research, full-funnel channel strategy, influencer activation, brand creative, and measurement.</p>
+      <div class="links">
+        <a href="YOUR_LINKEDIN_URL_HERE" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:uk.umair@yahoo.com">Email</a>
+      </div>
+    </div>
+    <div class="fine">
+      <span>© 2026 Umair Khan · "Know Your Rhythm" — Oura Ring campaign concept.</span>
+      <span>Conceptual academic project. Oura is a trademark of its respective owner.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
